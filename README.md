@@ -1,14 +1,16 @@
-# Parse a custom protocol format
+# Proto Python
 
-Your payment processing application must interface with an old-school mainframe format that we've named "MPS7".
-This means consuming a proprietary binary protocol format that no one on your team is familiar with yet.
+This is a coding exercise in parsing a fixed length encoded file using Python.
+The records are dummy financial transaction records with no relation to real world customers or accounts.
+
+This application is required to interface with an old-school mainframe format that we've named "MPS7".
+This means consuming a proprietary binary protocol format specification.
 
 ## Task
 
-You must read in a transaction log, `txnlog.dat`, and parse it according to the
-specification in Notes below.
+This application will read in a transaction log, `txnlog.dat`, and parse it according to the specification in Notes below.
 
-You must answer the following questions:
+It will answer the following questions:
 
 * What is the total amount in dollars of debits?
 * What is the total amount in dollars of credits?
@@ -16,16 +18,12 @@ You must answer the following questions:
 * How many autopays were ended?
 * What is balance of user ID 2456938384156277127?
 
-You must supply your source code as part of your answer. Write your code in your
-best programming language.
-
-We will want to compile your code from source and run it, so please include the
-complete instructions for doing so in a COMMENTS file.
+The complete instructions for compiling and running is in an included COMMENTS file.
 
 ## Notes
 
 Because `txnlog.dat` is a binary file, it can't be read by a normal text editor like sublime or vim.
-Instead, you'll need to read it programatically and parse the data you read in from there.
+Instead, it must be read programatically and parsed for the data needed.
 
 This is how the transaction log is structured:
 
@@ -57,3 +55,79 @@ The first record in the file, when fully parsed, will look something like this:
 | Record type | Unix timestamp | user ID             | amount in dollars |
 |-------------|----------------|---------------------|-------------------|
 | 'Debit'     | 1393108945     | 4136353673894269217 | 604.274335557087  |
+
+
+## Getting Started
+
+Clone this repository locally.
+Install required packages via PIP python commands.
+Run the program using Python.
+
+### Prerequisites
+
+Environment Requirements:
+
+```
+Python v3.7.2 32-bit was used for development of this module
+
+Python Packages Used:
+numpy
+struct
+pandas
+datetime
+tabulate
+```
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc

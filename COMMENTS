@@ -1,0 +1,36 @@
+ADHOC PROTO Homework Comments file
+
+Proto.py is the python solution for the PROTO homework assignment from AdHoc.
+
+1) Environment Requirements:
+Python 3.7.2
+PIP
+
+2) PIP Python Packages Required:
+Package           Version
+----------------- -------
+numpy             1.16.2
+pandas            0.24.1
+tabulate          0.8.3
+
+3) PIP Package Install Commands:
+pip install numpy
+pip install pandas
+pip install tabulate
+
+4) Run the program
+Execute Command for proto.py:
+python proto.py
+
+5) Unit Testing the program
+Execute Command for test_proto.py:
+python test_proto.py
+
+Example successful test results:
+$ python test_proto.py
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.056s
+
+OK
+
